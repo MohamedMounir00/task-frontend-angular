@@ -1,0 +1,66 @@
+<div class="container text-center">
+    <div class="add-user">
+        <h1>Add New User</h1>
+
+        <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit(f)" novalidate>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" name="name" [(ngModel)]="projectValue.name" #firstName="ngModel" placeholder=" Name" autocomplete="off" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required>
+                </div>
+              
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">desc</label>
+                  <textarea  class="form-control" name="desc" [(ngModel)]="projectValue.desc" #lastName="ngModel"  placeholder="Last Name" autocomplete="off" [ngClass]="{ 'is-invalid': f.submitted && desc.invalid }" required></textarea>
+                </div>
+
+<div class="form-group">
+    <label for="cat">cat</label>
+
+    <select class="form-control custom-select"  name="cat"
+    [(ngModel)]="projectValue.cat">
+    <option  value="product">product </option>
+    <option  value="translation">translation </option>
+    <option  value="writing">writing </option>
+    <option  value="other">other </option>
+</select>
+
+</div>
+
+
+  <div class="col-sm-12">
+                                        <div class="form-group ">
+                                            <label>status</label>
+                                      
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="radio" id="customRadioInline6" name="status" class="custom-control-input" value="old"  [(ngModel)]="projectValue.status">
+                                                <label class="custom-control-label" for="customRadioInline6"> old</label>
+                                            </div>
+                                               <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="radio" id="customRadioInline7" name="status" class="custom-control-input" value="new"  [(ngModel)]="projectValue.status">
+                                                <label class="custom-control-label" for="customRadioInline7"> new</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                         
+             
+
+               
+            <div class="form-group">
+                <label ></label>
+            <input type="file" class="form-control-file" name="image"    (change)="appendFileDetails('image',$event)" multiple #fileInput>
+
+           
+
+            
+          </div>
+
+                <button type="submit" class="btn btn-primary">ADD</button>
+                <a routerLink="/all-users" class="btn btn-info">All Users</a>
+
+              </form>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+body {
+    font-family: 'Cairo', sans-serif;
+}
+a {
+    color: #FFF !important;
+}
+
+.login-form {
+    width: 400px;
+    margin: 200px auto;
+}
+.btn {
+    margin: 0 5px ;
+}
+.btn:active , .btn:focus {
+    box-shadow: none !important;
+}
+.form-control , .btn {
+    border-radius: 0;
+}
+
+.form-control , .form-control:active , .form-control:focus {
+    box-shadow: none;
+}
+
+.login-form h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.all-users  {
+    margin: 30px 0 0 0 ;
+}
+.all-users h1 , .edit-user h1{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.all-users .table {
+    margin: 40px 0 0 0 ;
+}
+
+.add-user , .edit-user{
+    width: 400px;
+    margin: 90px auto;
+}
+.add-user h1 {
+    font-weight: 700;
+    margin-bottom: 40px;
+}

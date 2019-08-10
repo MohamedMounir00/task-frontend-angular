@@ -1,0 +1,37 @@
+<div class="container text-center">
+    <div class="all-users">
+        <h1>All Projects Page</h1>
+
+        <a routerLink='/add-project' class="btn btn-primary">Add New project</a>
+
+
+
+
+        <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">desc</th>
+                    <th scope="col">status</th>
+                    <th scope="col">cat</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr *ngFor=" let p of projects">
+                    <th scope="row">{{p.name}}</th>
+                    <td>{{p.desc}}</td>
+                    <td>{{p.status}}</td>
+                    <td>{{p.cat}}</td>
+                    <td>
+                        <a class="btn btn-danger" (click)="delete(p.id)">Delete</a>
+
+                    </td>
+                  </tr>
+
+                
+                </tbody>
+              </table>
+    </div>
+</div>
